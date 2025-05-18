@@ -1,0 +1,32 @@
+[
+  {
+    "route": "",
+    "flowLayout": false,
+    "params": {},
+    "title": "Layout",
+    "children": [
+      {
+        "route": "",
+        "title": "Inicio",
+        "menu": {
+          "icon": "vaadin:home",
+          "title": "Inicio",
+          "order": 0
+        },
+        "flowLayout": false,
+        "params": {}
+      },
+      {
+        "route": "pacas",
+        "title": "Pacas",
+        "menu": {
+          "icon": "vaadin:package",
+          "order": 1,
+          "title": "Pacas"
+        },
+        "flowLayout": false,
+        "params": {}
+      }
+    ]
+  }
+]
