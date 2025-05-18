@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/home/david/vaadin-pacas/src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/home/david/vaadin-pacas/src/main/frontend/generated/jar-resources",
+  "staticOutput": "/home/david/vaadin-pacas/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/home/david/vaadin-pacas/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/home/david/vaadin-pacas/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/home/david/vaadin-pacas/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/home/david/vaadin-pacas/target/dev-bundle/config",
+  "jarResourcesFolder": "/home/david/vaadin-pacas/src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/home/david/vaadin-pacas/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
