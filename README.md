@@ -1,3 +1,3 @@
 ## Diagrama UML
 
-![Diagrama UML del Proyecto](./UML_Proyecto1.jpg)
+![Diagrama UML del Proyecto](./UML_PROYECTO1.jpg)
