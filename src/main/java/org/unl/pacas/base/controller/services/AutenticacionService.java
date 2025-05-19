@@ -16,7 +16,7 @@ public class AutenticacionService {
 
     public HashMap<String, String> login(String username, String password) {
         HashMap<String, String> result = new HashMap<>();
-        // Aquí irá la lógica de login
+        
                 return result;
     }
         
@@ -24,7 +24,7 @@ public class AutenticacionService {
     
     public HashMap<String, String> registro(String username, String password, String email, String nombre) {
         HashMap<String, String> result = new HashMap<>();
-        // Aquí irá la lógica de registro
+       
                 return result;
             }
         }
