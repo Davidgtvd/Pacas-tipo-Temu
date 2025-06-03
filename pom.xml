@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ec.pacas</groupId>
-    <artifactId>vaadin-pacas</artifactId>
+    <groupId>com.unl.music</groupId>
+    <artifactId>unl-music</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <packaging>jar</packaging>
 
     <properties>
@@ -38,6 +39,7 @@
         <!-- Vaadin -->
         <dependency>
             <groupId>com.vaadin</groupId>
+            <!-- Replace artifactId with vaadin-core to use only free components -->
             <artifactId>vaadin</artifactId>
         </dependency>
         <dependency>
@@ -51,12 +53,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
+            <!-- Replace with the database you will be using in production -->
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Spring Boot Extras -->
+        <!-- Additional Spring Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -70,13 +73,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <!-- JSON -->
+        
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.11.0</version>
+           <groupId>com.google.code.gson</groupId>
+           <artifactId>gson</artifactId>
+           <version>2.11.0</version>
         </dependency>
+
 
         <!-- Testing -->
         <dependency>
@@ -90,6 +93,12 @@
             <version>${archunit.version}</version>
             <scope>test</scope>
         </dependency>
+    
+      <dependency>
+        <groupId>com.astralanguage</groupId>
+        <artifactId>astra-compiler</artifactId>
+        <version>1.4.4</version>
+      </dependency>
     </dependencies>
 
     <build>
@@ -110,6 +119,19 @@
                             <file>${project.basedir}/eclipse-formatter.xml</file>
                         </eclipse>
                     </java>
+                    <typescript>
+                        <includes>
+                            <include>src/main/frontend/**/*.ts</include>
+                            <include>src/main/frontend/**/*.tsx</include>
+                        </includes>
+                        <excludes>
+                            <exclude>src/main/frontend/generated/**</exclude>
+                        </excludes>
+                        <prettier>
+                            <prettierVersion>3.3.3</prettierVersion>
+                            <configFile>${project.basedir}/.prettierrc.json</configFile>
+                        </prettier>
+                    </typescript>
                 </configuration>
             </plugin>
             <plugin>
@@ -136,6 +158,7 @@
         <profile>
             <id>production</id>
             <dependencies>
+                <!-- Exclude development dependencies from production -->
                 <dependency>
                     <groupId>com.vaadin</groupId>
                     <artifactId>vaadin-core</artifactId>
