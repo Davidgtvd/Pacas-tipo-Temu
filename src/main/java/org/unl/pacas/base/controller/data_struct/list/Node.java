@@ -1,9 +1,9 @@
 package org.unl.pacas.base.controller.data_struct.list;
 
 /**
- * Clase genérica Node para la estructura de datos enlazada del sistema de pacas.
+ * Clase genérica Node para la estructura de datos enlazada del sistema.
  * 
- * @param <E> Tipo de dato (Paca, Usuario, Prenda, etc.)
+ * @param <E> Tipo de dato (Persona, Cuenta, Rol, Producto, etc.)
  */
 public class Node<E> {
     private E data;           
@@ -58,10 +58,6 @@ public class Node<E> {
 
     @Override
     public String toString() {
-        if (data instanceof org.unl.pacas.base.models.Paca) {
-            org.unl.pacas.base.models.Paca paca = (org.unl.pacas.base.models.Paca) data;
-            return "Node{data=Paca[id=" + paca.getId() + ", nombre=" + paca.getNombre() + "], hasNext=" + hasNext() + "}";
-        }
         return "Node{data=" + (data != null ? data.toString() : "null") + ", hasNext=" + hasNext() + "}";
     }
 
