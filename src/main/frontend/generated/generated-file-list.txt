@@ -1,0 +1,12 @@
+DireccionService.ts
+NotificacionService.ts
+PacaService.ts
+UsuarioService.ts
+org/unl/pacas/base/models/Direccion.ts
+org/unl/pacas/base/models/Notificacion.ts
+org/unl/pacas/base/models/Usuario.ts
+connect-client.default.ts
+endpoints.ts
+org/unl/pacas/base/models/DireccionModel.ts
+org/unl/pacas/base/models/NotificacionModel.ts
+org/unl/pacas/base/models/UsuarioModel.ts
