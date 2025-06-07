@@ -20,6 +20,16 @@ public class DetalleFacturaDao extends AdapterDao <DetalleFactura>{
         this.obj = obj;
     }
 
+    public Boolean save(){
+        try{
+            obj.setId(listAll().getLength()+1);
+            this.persist(obj);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+    }
+
     public Boolean update(Integer pos){
         try {
         this.update(obj, pos);
